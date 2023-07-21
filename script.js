@@ -6,4 +6,4 @@ console.log(dayjs());
 const currentDate = dayjs().format("MMMM DD YYYY");
 document.getElementById("currentDay").textContent = currentDate;
 
-
+// When I scroll down, I am presented with time blocks for standard business hours of 9am to 5pm.
