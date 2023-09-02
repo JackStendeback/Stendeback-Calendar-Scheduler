@@ -6,10 +6,13 @@ function checkHour() {
     const textAreaBackgrounds = document.querySelectorAll('.time-block');
 
     textAreaBackgrounds.forEach((textAreaBackground) => {
-        
         const timeBlockHour = parseInt(textAreaBackground.id.split('-')[1]);
-
         const textArea = textAreaBackground.querySelector('.text-area-bg');
+
+        const savedText = localStorage.getItem(`hour-${timeBlockHour}`);
+        if (savedText) {
+            textArea.value = savedText;
+        }
 
         if (currentHour === timeBlockHour) {
             textArea.classList.add('current');
@@ -32,6 +35,19 @@ function updateDateTime() {
     const currentDayElement = document.getElementById('current-day');
     currentDayElement.innerText = currentDateTime;
 }
+
+function saveText(hour) {
+    const textArea = document.querySelector(`#hour-${hour} .text-area-bg`);
+    const text = textArea.value;
+    localStorage.setItem(`hour-${hour}`, text);
+}
+
+document.querySelectorAll('.saveBtn').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const hour = event.target.closest('.time-block').id.split('-')[1];
+        saveText(hour);
+    });
+});
 
 updateDateTime();
 
