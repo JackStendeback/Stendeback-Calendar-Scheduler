@@ -38,5 +38,6 @@
 
     DEPLOYED LINK TO APPLICATION: https://jackstendeback.github.io/Stendeback-Calendar-Scheduler/
 
-    
+    Screenshot: ![Screenshot 2023-09-01 at 10 33 33 PM](https://github.com/JackStendeback/Stendeback-Calendar-Scheduler/assets/129129990/01548bf1-72d5-46ed-b920-afcb355e4322)
+
 
