@@ -24,6 +24,9 @@ function checkHour() {
     });
 }
 
+checkHour();
+setInterval(checkHour, 60 * 1000);
+
 function updateDateTime() {
     const currentDateTime = dayjs().format('dddd, MMMM D, YYYY h:mm A');
     const currentDayElement = document.getElementById('current-day');
@@ -32,8 +35,4 @@ function updateDateTime() {
 
 updateDateTime();
 
-
-
-checkHour();
-setInterval(checkHour, 60 * 1000);
 
