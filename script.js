@@ -24,6 +24,14 @@ function checkHour() {
     });
 }
 
+function updateDateTime() {
+    const currentDateTime = dayjs().format('dddd, MMMM D, YYYY h:mm A');
+    const currentDayElement = document.getElementById('current-day');
+    currentDayElement.innerText = currentDateTime;
+}
+
+updateDateTime();
+
 
 
 checkHour();
